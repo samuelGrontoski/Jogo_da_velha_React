@@ -18,7 +18,7 @@ export const PageLogin = () => {
 
             <GoogleLogin
                 onSuccess={ async (credentials) => {
-                    await login(credentials.clientId || '');
+                    await login(credentials.credential || '');
                 }}
                 onError={() => {
                     console.log('Login Failed');
